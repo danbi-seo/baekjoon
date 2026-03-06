@@ -1,3 +1,3 @@
 function solution(order) {
-    return order.reduce((sum, menu) => sum + (menu.includes('latte') ? 5000 : 4500), 0);
+    return order.reduce((acc, cur) => acc + (cur.includes('latte') ? 5000 : 4500), 0);
 }
