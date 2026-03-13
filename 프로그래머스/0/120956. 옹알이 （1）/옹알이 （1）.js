@@ -1,10 +1,10 @@
 function solution(babbling) {
-    var answer = 0;
-    for(const str of babbling){
-        let word = str.replace(/aya|ye|woo|ma/g,"");
-        if(word === ""){
-            answer++
-        }
-    }
-    return answer;
+  var answer = 0;
+  const regex = /^(aya|ye|woo|ma)+$/;
+
+  babbling.forEach(word => {
+    if (regex.test(word)) answer++;  
+  })
+
+  return answer;
 }
