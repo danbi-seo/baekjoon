@@ -1,3 +1,9 @@
 function solution(my_string, n) {
-    return [...my_string].map(char => char.repeat(n)).join('');
+    let answer = '';
+    
+    for(let char of my_string){
+        answer += char.repeat(n)
+    }
+    
+    return answer;
 }
